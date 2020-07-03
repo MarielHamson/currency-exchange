@@ -1,12 +1,12 @@
 # _Currency Exchange_
 
-#### _Lookup currency exchange rates from USD, 7.3.2020_
+#### _Lookup currency exchange rates, 7.3.2020_
 
 #### By _**Mariel Hamson**_
 
 ## Description
 
-This is an app that will allow you to look up the current exchange rate for your currency of choice, from US Dollars.
+This is an app that will allow you to look up the current exchange rate for your currency of choice, into your currency of choice.
 
 ## Specs
 
@@ -14,7 +14,7 @@ This is an app that will allow you to look up the current exchange rate for your
 | -------- | ----- | ------ | -------- |
 |  Return an error when non-number input is received |  abcd! | "Please enter a valid amount"   | Y |
 |  Return an appropriate, user-friendly error message for any API error | API response 402 | "Your request could not be completed at this time" | Y |
-   Return an appropriate, user-friendly error for an incorrect currency input | Canadian Cero | "This currency does not exist" | Y |
+|  Return an appropriate, user-friendly error for an incorrect currency input | Canadian Cero | "This currency does not exist" | Y |
 |  Convert input from two different currencies selected | $10.00 AUD | €8.89 | Y |
 
 ## Setup/Installation Requirements
@@ -31,8 +31,8 @@ This is an app that will allow you to look up the current exchange rate for your
 * Find the "Code" button and either download the .zip or use the .git filename to clone the repository on your command line into the desired location ("git clone https://github.com/MarielHamson/currency-exchange.git)
 * Open the project in your code editor of choice
 * Add a file in the root directory called ".env"
-* Add the following line: API_KEY= {insert your API key here}
-* run npm install _and_ npm start to see the app on a live server
+* Add the following line to the file: API_KEY= {insert your API key here}
+* run npm install _and then_ npm start to see the app on a live server
 
 ## Known Bugs
 
@@ -50,4 +50,4 @@ _HTML, CSS(Bootstrap), Javascript(jQuery), ExchangeRate API_
 
 *MIT License*
 
-Copyright (c) 2020 **_Mariel Hamson**
+Copyright (c) 2020 **_Mariel Hamson_**
