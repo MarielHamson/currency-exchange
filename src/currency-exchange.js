@@ -1,6 +1,5 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
 import $ from 'jquery';
 import { CurrencyExchange } from './../src/currency-exchange-service.js';
 
@@ -22,10 +21,9 @@ $(document).ready(function() {
       $('.showErrors').text("Please enter a valid amount");
       }
     function getElements(response) {
-      let convertToDollars = amount / response.conversion_rates[baseCurrency];
-      convertToDollars * response.conversion_rates[currency]
+      let convertToDollars = Math.round(amount / response.conversion_rates[baseCurrency], 2);
       if (response && response.conversion_rates[currency] !== undefined) {
-        $('.showExchange').text(`The amount of ${amount} in ${baseCurrency}is equal to ${convertToDollars * response.conversion_rates[currency]} in ${currency}`);
+        $('.showExchange').text(`The amount of ${amount} in ${baseCurrency} is equal to about ${Number.parseFloat(convertToDollars * response.conversion_rates[currency]).toFixed(2)} in ${currency}`);
       } else {
         $('.showErrors').text("There was an error processing your request.");
       }
