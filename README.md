@@ -1,12 +1,21 @@
 # _Currency Exchange_
 
-#### _Lookup currency exchange rates from USD, {Date of current version}_
+#### _Lookup currency exchange rates from USD, 7.3.2020_
 
 #### By _**Mariel Hamson**_
 
 ## Description
 
-_This is an app that will allow you to look up the current exchange rate for your currency of choice, from US Dollars_
+This is an app that will allow you to look up the current exchange rate for your currency of choice, from US Dollars.
+
+## Specs
+
+| Behavior | Input | Output |  Completed(Y/N?)  | 
+| -------- | ----- | ------ | -------- |
+|  Return an error when non-number input is received |  abcd! | "Error!"   | N |
+|  Return an appropriate, user-friendly error message for any API error | API response 402 | "Your request could not be completed at this time" | N |
+   Return an appropriate, user-friendly error for an incorrect currency input | Canadian Cero | "This currency does not exist" | N |
+|  Convert input from USD to currency selected (5 choices) | $10.00 | €8.89 | N |
 
 ## Setup/Installation Requirements
 
