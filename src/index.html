@@ -6,6 +6,23 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div class="container">
+    <h1>Currency exchange</h1>
+    <div class="form-group">
+      <label for="usd">Enter amount in US Dollars:</label>
+      <input id="usd" class="form-control" type="number">
+    </div>
+    <label for="currency">Choose a currency:</label>
+    <select class="form-control" id="currency">
+      <option value = "CNY">Chinese Renminbi</option>
+      <option value = "EUR">Spanish Euro</option>
+      <option value = "ZAR">South African Rand</option>
+      <option value = "DKK">Danish Krone</option>
+      <option value = "MYR">Malasian Ringgit</option>
+    </select>
+    <button class="btn-success" id="exchange">Exchange Currency</button>
+    <div class="showErrors"></div>
+    <div class="showExchange"></div>
+  </div>
 </body>
 </html>
