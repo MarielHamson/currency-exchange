@@ -16,14 +16,14 @@ $(document).ready(function() {
         let currencyExchange = new CurrencyExchange();
         const response = await currencyExchange.getExchange();
         getElements(response);
-        $('.showErrors').hide();
       })();
     } else {
       $('.showErrors').text("Please enter a valid amount");
       }
-
     function getElements(response) {
-      if (response) {
+      console.log(typeof response.conversion_rates[currency])
+
+      if (response && response.conversion_rates[currency] !== undefined) {
         $('.showExchange').text(`The amount of ${usd} is equal to ${response.conversion_rates[currency] * usd} in ${currency}`);
       } else {
         $('.showErrors').text("There was an error processing your request.");
