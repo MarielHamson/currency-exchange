@@ -15,7 +15,7 @@ This is an app that will allow you to look up the current exchange rate for your
 |  Return an error when non-number input is received |  abcd! | "Please enter a valid amount"   | Y |
 |  Return an appropriate, user-friendly error message for any API error | API response 402 | "Your request could not be completed at this time" | Y |
    Return an appropriate, user-friendly error for an incorrect currency input | Canadian Cero | "This currency does not exist" | Y |
-|  Convert input from USD to currency selected (all valid currencies) | $10.00 | €8.89 | N |
+|  Convert input from USD to currency selected (all valid currencies) | $10.00 | €8.89 | Y |
 
 ## Setup/Installation Requirements
 
