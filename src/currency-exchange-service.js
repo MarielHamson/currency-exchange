@@ -10,6 +10,7 @@ export class CurrencyExchange {
       }
       return jsonifiedResponse;
     } catch(error) {
+      console.error("Something went wrong with the request");
       return false;
     }
   }
