@@ -9,9 +9,8 @@ $(document).ready(function() {
   $('#exchange').click(function() {
     const usd = parseInt($('#us-dollars').val());
     const currency = $('#currency').val();
-    // $('#us-dollars').val("");
+    $('#us-dollars').val("");
     
-    console.log((usd.isNaN))
     if (!isNaN(usd)) {
       (async () => {
         let currencyExchange = new CurrencyExchange();
