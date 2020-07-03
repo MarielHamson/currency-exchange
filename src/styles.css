@@ -1,0 +1,36 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-image: url("../src/img/background.jpg");
+  background-size: cover;
+}
+
+a {
+  color: #ffb03b;
+}
+
+a:hover {
+  color: #ffc56e;
+  text-decoration: none;
+}
+
+h1{
+  font-family: "Satisfy", sans-serif;
+}
+
+@media (max-width: 992px) {
+  #header {
+    top: 0;
+    background: rgba(26, 24, 22, 0.85);
+  }
+
+  .form-control {
+    max-width: 25%;
+    opacity: 60%;
+  }
+  
+  .btn {
+    background: black;
+    color: grey;
+  }
+}
