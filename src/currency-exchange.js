@@ -18,8 +18,9 @@ import { CurrencyExchange } from './../src/currency-exchange-service.js';
       })();
   
       function getElements(response) {
+        console.log(usd)
         if (response) {
-          $('.showExchange').text(`The amount of $ ${usd} is equal to (${response.conversion_rates.EUR} * ${usd}) in ${currency}`);
+          $('.showExchange').text("The amount of $" + usd + " is equal to " + (response.conversion_rates.EUR * usd) + " in " + currency);
         } else {
           $('.showError').text(`There was an error processing your request.`);
         }
