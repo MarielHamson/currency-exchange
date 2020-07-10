@@ -23,12 +23,13 @@ $(document).ready(function() {
     function getElements(response) {
       if (response.result === "error") {
         $('.showErrors').show();
-        $('.showErrors').text("Your request did not go through. Please check your API key and try again")
-      } else {let convertToDollars = Math.round(amount / response.conversion_rates[baseCurrency], 2);
-      if (response && response.conversion_rates[currency] !== undefined) {
-        $('.showExchange').text(`${amount} in ${baseCurrency} is equal to about ${Number.parseFloat(convertToDollars * response.conversion_rates[currency]).toFixed(2)} in ${currency}`);
-      } else if (response.status !== 200 || response.conversion_rates[currency == undefined]) {
-        $('.showErrors').text("There was an error processing your request. Error code: " + response.status)}
+        $('.showErrors').text("Your request did not go through. Please check your API key and try again");
+      } else {let convertToDollars = Number.parseFloat(amount / response.conversion_rates[baseCurrency], 2);
+        let newCurrency = Number.parseFloat(convertToDollars * response.conversion_rates[currency]);
+        if (response && response.conversion_rates[currency] !== undefined) {
+          $('.showExchange').text(`${amount} in ${baseCurrency} is equal to about ${newCurrency} in ${currency}`);
+        } else if (response.status !== 200 || response.conversion_rates[currency == undefined]) {
+          $('.showErrors').text("There was an error processing your request. Error code: " + response.status);}
       }
     }
   });
